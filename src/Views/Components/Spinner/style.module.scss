@@ -1,0 +1,57 @@
+.spinner {
+    display: inline-block;
+}
+
+.tiny {
+    width: 16px;
+    height: 16px;
+}
+
+.small {
+    width: 30px;
+    height: 30px;
+}
+
+.medium {
+    width: 60px;
+    height: 60px;
+}
+
+.large {
+    width: 100px;
+    height: 100px;
+}
+
+.spinner::after {
+    content: ' ';
+    display: block;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border-color: #ec6c36 transparent #ec6c36 transparent !important;
+    animation: givewp-spinner 1.2s linear infinite !important;
+}
+
+.spinner.tiny::after {
+    border: 2px solid #ec6c36;
+}
+
+.spinner.small::after {
+    border: 3px solid #ec6c36;
+}
+
+.spinner.medium::after {
+    border: 6px solid #ec6c36;
+}
+.spinner.large::after {
+    border: 9px solid #ec6c36;
+}
+
+@keyframes givewp-spinner {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
